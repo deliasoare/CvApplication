@@ -1,0 +1,36 @@
+$background: #edf6f9;
+$header: #70d6ff;
+$secondary: #4ea8de;
+
+body {
+    background: $background;
+    .header, .footer {
+        background: $header;
+    }
+    .header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .headerText {
+            color: #6c757d;
+            font-size: 1.3rem;
+        }
+    }
+    fieldset {
+        background: $header;
+        border: 1px solid $header;
+        legend {
+            background: $secondary;
+            padding: 0.5em;
+            border-radius: 5px;
+        }
+        input, textarea {
+            background: $background;
+            border: 1px solid $secondary;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+        }
+    
+    }
+}
