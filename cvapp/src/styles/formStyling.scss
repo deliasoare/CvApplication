@@ -1,0 +1,50 @@
+$background: #edf6f9;
+$header: rgba(136, 221, 255, 0.9);
+$secondary: rgba(102, 162, 199, 0.9);
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+fieldset {
+    background: $header;
+    border: 1px solid $header;
+    position: relative;
+    legend {
+        background: $secondary;
+        padding: 0.5em;
+        border-radius: 5px;
+    }
+    input, textarea {
+        background: $background;
+        border: 1px solid $secondary;
+    }
+    input:focus, textarea:focus {
+        outline: none;
+    }
+    .addBtn {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        background: $secondary;
+        border: 3px solid $header;
+        color: $header;
+        font-size: 1.5rem;
+        padding: 1em;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.1s;
+        cursor: pointer;
+        &:hover {
+            background: $header;
+            border: 3px solid $secondary;
+            color: $secondary;
+        }
+    }
+}
