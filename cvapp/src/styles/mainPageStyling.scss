@@ -1,6 +1,6 @@
 $background: #edf6f9;
-$header: #70d6ff;
-$secondary: #4ea8de;
+$header: rgba(136, 221, 255, 0.9);
+$secondary: rgba(102, 162, 199, 0.9);
 
 body {
     background: $background;
@@ -30,6 +30,12 @@ body {
         input:focus, textarea:focus {
             outline: none;
         }
-    
+    }
+    .footer {
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.3rem;
+        }
     }
 }

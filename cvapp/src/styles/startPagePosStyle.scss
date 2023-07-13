@@ -1,5 +1,6 @@
 $primary: #70d6ff;
 $secondary:#4ea8de;
+$button: rgba(78, 168, 222, 0.1);
 
 @mixin buttonBackgroundNormal($positioning) {
     content: '';
@@ -59,8 +60,8 @@ $secondary:#4ea8de;
             background: rgba(0, 0, 0, 0.05);
             box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
             border: none;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-top: 1px solid $button;
+            border-bottom: 1px solid $button;
             border-radius: 15px;
             position:absolute;
             transition: 0.5s;
@@ -80,7 +81,7 @@ $secondary:#4ea8de;
             left: 0;
             width: 50%;
             height: 100%;
-            background: linear-gradient(to left, rgba(0, 0, 0, 0.15), transparent);
+            background: linear-gradient(to left, rgba(78, 168, 222, 0.15), transparent);
             transform: skewX(45deg) translateX(0);
             transition: 0.5s;
         }

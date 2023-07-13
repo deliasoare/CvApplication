@@ -21,9 +21,20 @@ html, body {
             }
             .main {
                 padding: 2em;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    fieldset + fieldset {
+                        margin-top: 2%;
+                    }
+                }
             }
             .footer {
                 @include center;
+            }
+            .header, .footer {
+                border-radius: 10px;
+                box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
             }
         }
     }
