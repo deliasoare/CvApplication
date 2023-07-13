@@ -1,12 +1,19 @@
 import logo from './logo.svg';
 import './styles/styles.scss';
-import Form from './components/form/form';
+import Header from './components/page/header';
+import Main from './components/page/main';
+import Footer from './components/page/footer';
+
 import { useState } from 'react';
 
 function App() {
   const [info, setInfo] = useState([]);
   return (
-    <Form info={info} />
+    <div class="container">
+      <Header />
+      <Main info={info} />
+      <Footer />
+    </div>
   );
 }
 
