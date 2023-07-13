@@ -1,24 +1,50 @@
-
-export default function PersonalDescription() {
+import { useState } from 'react';
+export default function PersonalDescription({ setPersonal }) {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [address, setAddress] = useState('');
+    const [description, setDescription] = useState('');
+    
+    const updatePersonal = () => {
+        setPersonal({
+            name, email, address, description
+        });
+    }
+    const changeName = (e) => {
+        setName(e.target.value);
+        updatePersonal();
+    }
+    const changeEmail = (e) => {
+        setEmail(e.target.value);
+        updatePersonal();
+    }
+    const changeAddress = (e) => {
+        setAddress(e.target.value);
+        updatePersonal();
+    }
+    const changeDesc = (e) => {
+        setDescription(e.target.value);
+        updatePersonal();
+    }
     return (
         <fieldset>
             <legend>Personal</legend>
             <ul className="personalInfo field">
                 <li>
                         <label htmlFor="name">Name</label>
-                        <input type="text" id="name"></input>
+                        <input type="text"  onChange={changeName} id="name" value={name}></input>
                     </li>
                     <li>
                         <label htmlFor="emailAddress">Email address</label>
-                        <input type="text" id="emailAddress"></input>
+                        <input type="text" onChange={changeEmail} id="emailAddress" value={email}></input>
                     </li>
                     <li>
                         <label htmlFor="address">Address</label>
-                        <input type="text" id="address"></input>
+                        <input type="text" onChange={changeAddress} id="address" value={address}></input>
                     </li>
                 <li>
                     <label htmlFor="personalDescription">Personal description</label>
-                    <textarea rows="2" cols="38" id="personalDescription"></textarea>
+                    <textarea value={description} onChange={changeDesc} rows="2" cols="38" id="personalDescription"></textarea>
                 </li>
             </ul>
         </fieldset>

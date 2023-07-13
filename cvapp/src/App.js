@@ -8,10 +8,11 @@ import { useState } from 'react';
 
 function App() {
   const [info, setInfo] = useState([]);
+
   return (
-    <div class="container">
+    <div className="container">
       <Header />
-      <Main info={info} />
+      <Main setInfo={setInfo} />
       <Footer />
     </div>
   );
