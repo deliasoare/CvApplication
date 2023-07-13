@@ -12,7 +12,7 @@ export default function AdditionalAchievements() {
                     <label htmlFor="description">Description</label>
                     <textarea rows="2" cols="38" id="description"></textarea>
                 </li>
-                <button class="addAchievement">+</button>
+                <button class="addAchievement addBtn">+</button>
             </ul>
         </fieldset>
     );

@@ -1,4 +1,4 @@
-function Work() {
+function Experience() {
     return (
         <ul className="educationInfo field">
             <li>
@@ -11,10 +11,10 @@ function Work() {
             </li>
             <li>
                 <label htmlFor="startYear">Starting year</label>
-                <input type="number" id="startYear" value={Number(new Date().getFullYear())}></input>                </li>
+                <input type="number" id="startYear" min="1900" max="2099" step="1"  value={Number(new Date().getFullYear())}></input>                </li>
             <li>
                 <label htmlFor="endYear">Ending year</label>
-                <input type="number" id="endYear" value={Number(new Date().getFullYear())}></input>
+                <input type="number" id="endYear" min="1900" max="2099" step="1" ></input>
             </li>
         </ul>
     );
@@ -23,8 +23,8 @@ export default function WorkExperience() {
     return (
         <fieldset>
             <legend>Work experience</legend>
-            <Work />
-            <button class="addEducation">+</button>
+            <Experience />
+            <button class="addEducation addBtn">+</button>
         </fieldset>
     );
 }
