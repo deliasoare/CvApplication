@@ -1,13 +1,15 @@
 import { useState } from 'react';
 
-function EducationPart() {
+function EducationPart({education, setEducation, index}) {
     const [institution, setInstitution] = useState('');
     const [specialization, setSpecialization] = useState('');
     const [startYear, setStartYear] = useState(Number(new Date().getFullYear()));
     const [endYear, setEndYear] = useState(Number(new Date().getFullYear()));   
 
     const changeEducationPart = () => {
-        
+        let aux = education;
+        aux[index] = {institution, specialization, startYear, endYear};
+        setEducation(aux);
     }
     const changeInstitution = (e) => {
         setInstitution(e.target.value);
@@ -47,12 +49,15 @@ function EducationPart() {
     );
 }
 export default function Education({education, setEducation }) {
-    const [edFields, setEdFields] = useState([<EducationPart />]);
+    const [fieldIndex, setFieldIndex] = useState(1);
+    const [edFields, setEdFields] = useState([<EducationPart education={education} setEducation={setEducation} index={0}/>]);
 
     const addField = (e) => {
         e.preventDefault();
-        if (edFields.length < 5)
-            setEdFields(edFields.concat(<EducationPart />));
+        if (edFields.length < 5) {
+            setEdFields(edFields.concat(<EducationPart education={education} setEducation={setEducation} index={fieldIndex}/>));
+            setFieldIndex(fieldIndex + 1);
+        }
     }
 
     return (
