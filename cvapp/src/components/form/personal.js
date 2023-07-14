@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 export default function PersonalDescription({ setPersonal }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -12,20 +12,19 @@ export default function PersonalDescription({ setPersonal }) {
     }
     const changeName = (e) => {
         setName(e.target.value);
-        updatePersonal();
     }
     const changeEmail = (e) => {
         setEmail(e.target.value);
-        updatePersonal();
     }
     const changeAddress = (e) => {
         setAddress(e.target.value);
-        updatePersonal();
     }
     const changeDesc = (e) => {
         setDescription(e.target.value);
-        updatePersonal();
     }
+    useEffect(() => {
+        updatePersonal();
+    }, [name, email, address, description])
     return (
         <fieldset>
             <legend>Personal</legend>

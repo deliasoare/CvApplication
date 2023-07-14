@@ -14,7 +14,8 @@ export default function Form({ info, activatePreviewPage }){
         info.setInfo({
             personal, education, workExp, achievements
         });
-        console.log(education);
+
+        console.log({personal, education, workExp});
     }
     
 
@@ -26,7 +27,7 @@ export default function Form({ info, activatePreviewPage }){
         }}>
             <PersonalDescription setPersonal={setPersonal}/>
             <Education education={education} setEducation={setEducation}/>
-            <WorkExperience onChangeFields={setWorkExp}/>
+            <WorkExperience workExp={workExp} setWorkExp={setWorkExp}/>
             <AdditionalAchievements onChangeFields={setAchievements}/>
             <button className="submitForm" > SUBMIT</button> 
         </form>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function EducationPart({education, setEducation, index}) {
     const [institution, setInstitution] = useState('');
@@ -13,20 +13,20 @@ function EducationPart({education, setEducation, index}) {
     }
     const changeInstitution = (e) => {
         setInstitution(e.target.value);
-        changeEducationPart();
     }
     const changeSpecialization = (e) => {
         setSpecialization(e.target.value);
-        changeEducationPart();
     }
     const changeStartYear = (e) => {
         setStartYear(e.target.value);
-        changeEducationPart();
     }
     const changeEndYear = (e) => {
         setEndYear(e.target.value);
-        changeEducationPart();
     }
+    
+    useEffect(() => {
+        changeEducationPart();
+    }, [institution, specialization, startYear, endYear]);
     return (
         <ul className="educationInfo field">
             <li>
