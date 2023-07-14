@@ -21,8 +21,10 @@ export default function Main(setInfo) {
            {startPageActive === true ? 
             <StartPage onButtonClick={activateFormPage}/>
             :
-            formPageActive === true &&
+            formPageActive === true ?
             <Form info={setInfo} activatePreviewPage={activatePreviewPage} />
+            :
+            <a>You made it to preview!</a>
          }
         </div>
     )

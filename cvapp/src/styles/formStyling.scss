@@ -2,16 +2,14 @@ $background: #edf6f9;
 $header: rgba(136, 221, 255, 0.9);
 $secondary: rgba(102, 162, 199, 0.9);
 
-@property --angle {
-    syntax: '<angle>';
-    initial-value: 0deg;
-    inherits: false;
-  }
 
 fieldset {
     background: $header;
     border: 1px solid $header;
     position: relative;
+    .field + .field::before {
+        background: $secondary;
+    }
     legend {
         background: $secondary;
         padding: 0.5em;

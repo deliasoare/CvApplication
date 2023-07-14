@@ -14,18 +14,18 @@ export default function Form({ info, activatePreviewPage }){
         info.setInfo({
             personal, education, workExp, achievements
         });
-        console.log(personal);
+        console.log(education);
     }
     
 
     return (
-        <form onSubmit={function(e) {
+        <form action="" onSubmit={function(e) {
             updateInfo();
             activatePreviewPage();
-            return false;
+            e.preventDefault();
         }}>
             <PersonalDescription setPersonal={setPersonal}/>
-            <Education onChangeFields={setEducation}/>
+            <Education education={education} setEducation={setEducation}/>
             <WorkExperience onChangeFields={setWorkExp}/>
             <AdditionalAchievements onChangeFields={setAchievements}/>
             <button className="submitForm" > SUBMIT</button> 
