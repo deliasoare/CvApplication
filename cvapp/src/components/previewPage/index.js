@@ -19,7 +19,7 @@ export default function Preview({info}) {
                         <span className="sectionText">Personal</span>
                         <div class="secondarySection">
                             <p className="cvEmail">Email: {info.personal.email}</p>
-                            <p className="cvAddress">Address: {info.personal.address}</p>
+                            <p clasprintName="cvAddress">Address: {info.personal.address}</p>
                         </div>
                     </div>
                     {info.education.some(exists) &&
@@ -72,7 +72,7 @@ export default function Preview({info}) {
                     }
                 </div>
             </div>
-            <button onClick={function() {window.print()}} class="printCV">Print</button>
+            <button onClick={function() {window.print()}} class="printCV">PRINT</button>
         </div>
     )
 }

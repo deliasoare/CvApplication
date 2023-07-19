@@ -1,9 +1,14 @@
+$secondary: rgba(102, 162, 199, 0.9);
+$background: #edf6f9;
+
 .previewContainer {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 50px;
     .CV {
         width: clamp(300px, 70%, 600px);
         aspect-ratio: 620/877;
@@ -36,6 +41,27 @@
         }
         .iconHeader img {
             min-width: 60px;
+        }
+    }
+    .printCV {
+        margin-left: 50%;
+        min-width: 100px;
+        align-self: flex-end;
+        border: 2px solid $secondary;
+        box-shadow: 2px 2px 2px 2px $secondary;
+        color:$secondary;
+        padding: 0.5em;
+        font-size: 1.1rem;
+        transition: all 0.3s;
+        position: sticky;
+        bottom: 0;
+        right: 20%;
+        cursor: pointer;
+        &:hover {
+            color: $background;
+            background: $secondary;
+            box-shadow: none;
+            transition: all 0.5s;
         }
     }
 }
