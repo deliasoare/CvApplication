@@ -2,6 +2,20 @@ $background: #edf6f9;
 $header: rgba(136, 221, 255, 0.9);
 $secondary: rgba(102, 162, 199, 0.9);
 
+.tip {
+    background: #fff;
+    padding: 1em;
+    border-radius: 20px;
+    box-shadow: 5px 5px $secondary;
+    text-align: center;
+    .closeTip {
+        cursor: pointer;
+        font-size: 1.2rem;
+        &:hover {
+            color: $secondary;
+        }
+    }
+}
 form {
     position: relative;
     .submitForm {

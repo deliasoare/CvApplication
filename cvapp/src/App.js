@@ -10,11 +10,11 @@ function App() {
   const [info, setInfo] = useState([]);
 
   return (
-    <div className="container">
-      <Header />
-      <Main info={info} setInfo={setInfo} />
-      <Footer />
-    </div>
+      <div className="container">
+        <Header />
+        <Main info={info} setInfo={setInfo} />
+        <Footer />
+      </div>
   );
 }
 

@@ -5,8 +5,36 @@ $secondary: rgba(102, 162, 199, 0.9);
     justify-content: center;
     align-items: center;
 }
-
+@keyframes showTip {
+    0% {
+        top: 0;
+        opacity: 0;
+    }
+    100% {
+        top: 60px;
+        opacity: 1;
+    }
+}
 body {
+    .tip {
+        position: fixed;
+        margin-left: 50%;
+        width: 70%;
+        min-width: 350px;
+        transform: translateX(-50%);
+        animation: {
+            name: showTip;
+            duration: 400ms;
+            fill-mode: forwards;
+            timing-function: ease-in-out;
+        }
+        z-index: 1;
+        .closeTip {
+            position: absolute;
+            right: 4px;
+            top: 1%;
+        }
+    }
     form {
         @include center;
         padding: 1em 0;
