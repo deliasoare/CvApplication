@@ -43,7 +43,7 @@ export default function PersonalDescription({ setPersonal }) {
                     </li>
                 <li>
                     <label htmlFor="personalDescription">Personal description</label>
-                    <textarea value={description} onChange={changeDesc} rows="2" cols="38" id="personalDescription"></textarea>
+                    <textarea value={description} onChange={changeDesc} rows="2" cols="38"maxLength={250} id="personalDescription"></textarea>
                 </li>
             </ul>
         </fieldset>

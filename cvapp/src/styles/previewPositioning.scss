@@ -8,12 +8,15 @@
         width: clamp(300px, 70%, 600px);
         aspect-ratio: 620/877;
         display: grid;
-        grid-template-rows: 75px 1fr;
+        grid-template-rows: 150px 1fr;
         .cvMain {
             padding: 4em 2em;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: space-around;
+            .secondarySection {
+                margin-left: 5%;
+            }
         }
 
         .cvHeader {
@@ -22,6 +25,13 @@
             justify-content: space-around;
             .writtenHeader {
                 width: 70%;
+                display: flex;
+                justify-content:center;
+                align-items:center;
+                flex-direction: column;
+            }
+            .iconHeader img {
+                margin-top: 50%;
             }
         }
         .iconHeader img {
@@ -38,11 +48,22 @@
     .CV, .CV * {
         visibility: visible;
     }
-    .CV {
+    .CV {        
+        grid-template-rows:  150px 1fr;
         width: 210mm !important;
         height: 296mm !important;
         position: absolute;
         top: 0;
         left: 0;
+        font-size: 1rem !important;
+        .minorWriting {
+            font-size: 0.8rem !important;
+        }
+        .cvName {
+            font-size: 1.2rem !important;
+        }
+        .sectionText {
+            font-size: 1.3rem !important;
+        }
     }
 }

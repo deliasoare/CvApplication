@@ -12,17 +12,57 @@ $secondary: rgba(102, 162, 199, 0.3);
                     border-bottom: 3px solid $primary;
                     display: block;
                     width: 90%;
-                }                
+                    margin-bottom: 5%;
+                }          
+                .minorWriting {
+                    font-size: 0.8rem;
+                    color: darkgrey;
+                }      
+                .lineUnder {
+                    border-bottom: 2px solid $primary;
+                    width: 60%;
+                }
+                div + div {
+                    margin-top: 3%;
+                }
             }
         }
         .cvHeader {
             background: $primary;
             .writtenHeader {
                 .cvName {
-                    font-size: 1.3rem;
+                    font-size: 1.2rem;
                     font-weight: bolder;
                 }
             }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .CV {
+        font-size: 0.8rem;
+        .minorWriting {
+            font-size: 0.6rem;
+        }
+        .cvName {
+            font-size: 0.9rem;
+        }
+        .sectionText {
+            font-size: 1rem !important;
+        }
+    }
+}
+@media (max-width: 530px) {
+    .CV {
+        font-size: 0.6rem;
+        .minorWriting {
+            font-size: 0.4rem;
+        }
+        .cvName {
+            font-size: 0.7rem;
+        }
+        .sectionText {
+            font-size: 0.8rem !important;
         }
     }
 }
