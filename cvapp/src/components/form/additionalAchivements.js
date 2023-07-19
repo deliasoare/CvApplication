@@ -6,7 +6,10 @@ function Achievement({achievements, setAchievements, index}) {
 
     const changeAchievements = () => {
         let aux = achievements;
-        aux[index] = {achievementTitle, achievementDescription};
+        if (achievementDescription === '' && achievementTitle === '')
+            aux[index] = '';
+        else
+            aux[index] = {achievementTitle, achievementDescription};
         setAchievements(aux);
     }
     const changeTitle = (e) => {

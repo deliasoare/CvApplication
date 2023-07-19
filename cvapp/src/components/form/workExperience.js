@@ -8,7 +8,10 @@ function Experience({workExp, setWorkExp, index}) {
 
     const changeCurrentExperience = () => {
         let aux = workExp;
-        aux[index] = {institution, position, startYear, endYear};
+        if (institution === '' && position === '' && startYear === '' && endYear === '' )
+            aux[index] = '';
+        else
+            aux[index] = {institution, position, startYear, endYear};
         setWorkExp(aux);
     }
     const changeInstitution = (e) => {

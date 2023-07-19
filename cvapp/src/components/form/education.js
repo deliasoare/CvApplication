@@ -8,7 +8,7 @@ function EducationPart({education, setEducation, index}) {
 
     const changeEducationPart = () => {
         let aux = education;
-        if (institution === '' && specialization === '' && startYear === '' && specialization === '' )
+        if (institution === '' && specialization === '' && startYear === '' && endYear === '' )
             aux[index] = '';
         else
             aux[index] = {institution, specialization, startYear, endYear};
