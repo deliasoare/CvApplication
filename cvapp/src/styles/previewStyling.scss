@@ -1,0 +1,46 @@
+.previewContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .CV {
+        width: clamp(300px, 70%, 600px);
+        .cvMain {
+            padding: 2em;
+        }
+        .cvHeader {
+            padding: 1em;
+            background: #a8dadc;
+            display: flex;
+            justify-content: space-around;
+            .writtenHeader {
+                width: 70%;
+                .cvName {
+                    font-size: 1.3rem;
+                    font-weight: bolder;
+                }
+            }
+        }
+        .iconHeader img {
+            min-width: 60px;
+        }
+    }
+}
+
+@page { size: A4;  margin: 0; }
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .CV, .CV * {
+        visibility: visible;
+    }
+    .CV {
+        width: 210mm !important;
+        height: 296mm !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
