@@ -31,19 +31,19 @@ export default function PersonalDescription({ setPersonal }) {
             <ul className="personalInfo field">
                 <li>
                         <label htmlFor="name">Name</label>
-                        <input type="text"  onChange={changeName} id="name" value={name}></input>
+                        <input required type="text"  onChange={changeName} id="name" value={name}></input>
                     </li>
                     <li>
                         <label htmlFor="emailAddress">Email address</label>
-                        <input type="text" onChange={changeEmail} id="emailAddress" value={email}></input>
+                        <input required type="text" onChange={changeEmail} id="emailAddress" value={email}></input>
                     </li>
                     <li>
                         <label htmlFor="address">Address</label>
-                        <input type="text" onChange={changeAddress} id="address" value={address}></input>
+                        <input required type="text" onChange={changeAddress} id="address" value={address}></input>
                     </li>
                 <li>
                     <label htmlFor="personalDescription">Personal description</label>
-                    <textarea value={description} onChange={changeDesc} rows="2" cols="38"maxLength={250} id="personalDescription"></textarea>
+                    <textarea required value={description} onChange={changeDesc} rows="2" cols="38"maxLength={250} id="personalDescription"></textarea>
                 </li>
             </ul>
         </fieldset>
