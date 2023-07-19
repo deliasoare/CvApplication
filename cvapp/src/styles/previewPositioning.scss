@@ -6,9 +6,16 @@
     align-items: center;
     .CV {
         width: clamp(300px, 70%, 600px);
+        aspect-ratio: 620/877;
+        display: grid;
+        grid-template-rows: 75px 1fr;
         .cvMain {
-            padding: 2em;
+            padding: 4em 2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
         }
+
         .cvHeader {
             padding: 1em;
             display: flex;

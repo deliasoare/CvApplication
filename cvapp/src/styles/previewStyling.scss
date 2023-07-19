@@ -1,9 +1,22 @@
+$primary: #a8dadc;
+$secondary: rgba(102, 162, 199, 0.3);
+
 .previewContainer {
     .CV {
+        background: #fff;
+        box-shadow: 5px 5px $secondary;
         .cvMain {
+            .mainSection {
+                .sectionText {
+                    font-size: 1.3rem;
+                    border-bottom: 3px solid $primary;
+                    display: block;
+                    width: 90%;
+                }                
+            }
         }
         .cvHeader {
-            background: #a8dadc;
+            background: $primary;
             .writtenHeader {
                 .cvName {
                     font-size: 1.3rem;

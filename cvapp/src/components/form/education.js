@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 function EducationPart({education, setEducation, index}) {
     const [institution, setInstitution] = useState('');
     const [specialization, setSpecialization] = useState('');
-    const [startYear, setStartYear] = useState(Number(new Date().getFullYear()));
-    const [endYear, setEndYear] = useState(Number(new Date().getFullYear()));   
+    const [startYear, setStartYear] = useState('');
+    const [endYear, setEndYear] = useState('');   
 
     const changeEducationPart = () => {
         let aux = education;

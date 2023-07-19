@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 function Experience({workExp, setWorkExp, index}) {
     const [institution, setInstitution] = useState('');
     const [position, setPosition] = useState('');
-    const [startYear, setStartYear] = useState(Number(new Date().getFullYear()));
-    const [endYear, setEndYear] = useState(Number(new Date().getFullYear()));
+    const [startYear, setStartYear] = useState('');
+    const [endYear, setEndYear] = useState('');
 
     const changeCurrentExperience = () => {
         let aux = workExp;
