@@ -4,20 +4,17 @@ import WorkExperience from './workExperience';
 import AdditionalAchievements from './additionalAchivements';
 import { useState } from 'react';
 
-export default function Form({ info, activatePreviewPage }){
+export default function Form({ setInfo, activatePreviewPage }){
     const [personal, setPersonal] = useState([]);
     const [education, setEducation] = useState([]);
     const [workExp, setWorkExp] = useState([]);
     const [achievements, setAchievements] = useState([]);
 
     const updateInfo = () =>{
-        info.setInfo({
-            personal, education, workExp, achievements
+        setInfo({
+            personal, education , workExp, achievements
         });
-
-        console.log({personal, education, workExp, achievements});
     }
-    
 
     return (
         <form action="" onSubmit={function(e) {
@@ -29,7 +26,7 @@ export default function Form({ info, activatePreviewPage }){
             <Education education={education} setEducation={setEducation}/>
             <WorkExperience workExp={workExp} setWorkExp={setWorkExp}/>
             <AdditionalAchievements achievements={achievements} setAchievements={setAchievements}/>
-            <button className="submitForm" > SUBMIT</button> 
+            <button className="submitForm"> CONVERT </button> 
         </form>
     );
 }

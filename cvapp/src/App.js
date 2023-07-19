@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="container">
       <Header />
-      <Main setInfo={setInfo} />
+      <Main info={info} setInfo={setInfo} />
       <Footer />
     </div>
   );

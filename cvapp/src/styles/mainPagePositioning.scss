@@ -1,3 +1,4 @@
+$secondary: rgba(102, 162, 199, 0.3);
 
 @mixin center {
     display: flex;
@@ -34,7 +35,10 @@ html, body {
             }
             .header, .footer {
                 border-radius: 10px;
-                box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+                box-shadow: 5px 5px $secondary;
+            }
+            .footer {
+                box-shadow: -5px -5px $secondary;
             }
         }
     }
