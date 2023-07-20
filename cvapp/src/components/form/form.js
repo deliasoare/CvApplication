@@ -28,7 +28,7 @@ export default function Form({ setInfo, activatePreviewPage }){
         <>
             {!isHidden &&
             <div className = 'tip'>
-                If you wish for one of the fields not to appear in your CV, simply don't write anything in it (except Personal!)
+                If you wish for one of the fields not to appear in your CV, simply don't write anything in it ( except Personal, which is mandatory! )
                 <span class="closeTip" onClick={closeTip}>X</span>
             </div>
             }
