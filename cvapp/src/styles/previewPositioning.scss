@@ -15,7 +15,7 @@ $background: #edf6f9;
         display: grid;
         grid-template-rows: 150px 1fr;
         .cvMain {
-            padding: 4em 2em;
+            padding: 1em 2.5em;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -70,6 +70,7 @@ $background: #edf6f9;
 @media print {
     body * {
         visibility: hidden;
+
     }
     .CV, .CV * {
         visibility: visible;
@@ -77,7 +78,7 @@ $background: #edf6f9;
     .CV {        
         grid-template-rows:  150px 1fr;
         width: 210mm !important;
-        height: 296mm !important;
+        height: max(296mm, fit-content) !important;
         position: absolute;
         top: 0;
         left: 0;

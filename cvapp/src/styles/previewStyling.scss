@@ -5,6 +5,8 @@ $secondary: rgba(102, 162, 199, 0.3);
     .CV {
         background: #fff;
         box-shadow: 5px 5px $secondary;
+        word-break:break-all;
+        text-wrap:wrap;
         .cvMain {
             .mainSection {
                 .sectionText {
@@ -12,7 +14,7 @@ $secondary: rgba(102, 162, 199, 0.3);
                     border-bottom: 3px solid $primary;
                     display: block;
                     width: 90%;
-                    margin-bottom: 5%;
+                    margin-bottom: 2%;
                 }          
                 .minorWriting {
                     font-size: 0.8rem;
@@ -23,7 +25,7 @@ $secondary: rgba(102, 162, 199, 0.3);
                     width: 60%;
                 }
                 div + div {
-                    margin-top: 3%;
+                    margin-top: 1%;
                 }
             }
         }
@@ -53,6 +55,9 @@ $secondary: rgba(102, 162, 199, 0.3);
     }
 }
 @media (max-width: 530px) {
+    html {        
+        background: #fff;
+    }
     .CV {
         font-size: 0.6rem;
         .minorWriting {
